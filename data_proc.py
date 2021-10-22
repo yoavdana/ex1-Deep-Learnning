@@ -62,4 +62,4 @@ def DATA_pre_pros(filename_pos,filename_neg):
     return train_set[:, 0], test_set[:, 0], train_set[:, 1], test_set[:,1]
 
 
-DATA_pre_pros('resorces/pos_A0201.txt', 'resorces/neg_A0201.txt')
+
