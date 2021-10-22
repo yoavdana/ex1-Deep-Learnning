@@ -59,4 +59,4 @@ def DATA_pre_pros(filename_pos,filename_neg):
     final_data = list()
 
 
-Read_Data('pos_A0201.txt', 1)
+Read_Data('resorces/pos_A0201.txt', 1)
