@@ -17,7 +17,7 @@ class NetWork(nn.Module):
 
         batch_size = x.shape[0]
 
-        x = x.view(batch_size, -1)
+        # x = x.view(batch_size, -1)
 
         # x = [batch size, height * width]
 
