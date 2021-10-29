@@ -64,3 +64,27 @@ def DATA_pre_pros(filename_pos,filename_neg):
 def shuffle_data(data_Xy):
     np.random.shuffle(data_Xy)
     return data_Xy[:,:180],data_Xy[:,-1]
+
+
+
+
+def spike_seq(filename):
+
+    mapping = {'A': 0, 'R': 1, 'N': 2, 'D': 3, 'C': 4, 'E': 5, 'Q': 6, 'G': 7, 'H': 8, 'I': 9, 'L': 10, 'K': 11,
+               'M': 12, 'F': 13, 'P': 14, 'S': 15, 'T': 16, 'W': 17, 'Y': 18, 'V': 19}
+
+
+    with open(filename) as f:
+        lines = f.readlines()[0]
+        predeict=list()
+
+        for i in range(len(lines)-9):
+            map = np.zeros((9, 20))
+            map[i, mapping[lines[i:i+9]]] += 1
+            map = map.flatten()
+            predeict.append(map)
+
+        return predeict
+
+seq=spike_seq('resorces/spike_acid.txt')
+print(seq)
