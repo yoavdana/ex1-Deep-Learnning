@@ -22,43 +22,4 @@ And, make sure your optimizer operates on these variables and not your network�
 Note that the solution to this problem can be a tensor of arbitrary nature (i.e., have arbitrary values and signs). So consider the way this solution is mapped into a meaningful peptide sequence. Report this resulting sequence.
 
 
-Theoretical Questions:
-
-Show that the composition of linear functions is a linear function. Show that the composition of affine transformations remains an affine function.
-The calculus behind the Gradient Descent method:
-What is the stopping condition of this iterative scheme,
-
-
-
-Use the second-order multivariate Taylor theorem,
-
- to derive the conditions for classifying a stationary point as local maximum or minimum.
-Assume the network is required to predict an angle (0-360 degrees). How will you define a prediction loss that accounts for the circularity of this quantity, i.e., the loss between 2 and 360 is not 358, but 2 (since 0 is 360..). Write your answer in a pytorch-compilable form.
-
-Chain Rule. Differentiate the following terms (specify the points of evaluation of each function): 
-
-
- 
-
-
-                                    
-
-
-            
-
-
-               
-Prove that the Kullback-Libler divergence is non-negative, e.g.
-Dkl(P||Q)0 s.t Dkl (P||Q)=0 iff P=Q
-Prove that the  Kullback-Libler divergence (Dkl(P||Q)=xXp(x)log(p(x)q(x)) ) is convex e.g., Dkl(p1+(1-)p2||q1+(1-)q2) Dkl(p1||q1)+(1-)Dkl (p2||q2) 
-where  (p1,q1) and (p2,q2) are two pairs of probability distributions and  [0,1] 
-
-Explain why Cybenko and Hornik theorems also imply that linear combinations of translated and dilated RelU functions form a dense set in C[0,1].
-
-Generalize the construction of a deep network that expresses a shallow network in O(N) neurons, that we saw in class, to signed functions.
-
-Submission Guidelines:
-
-The submission is in pairs. Please submit a single zip file named “ex1_ID1_ID2.zip”. This file should contain your code, along with an ”ex1.pdf” file which should contain your answers to the theoretical part as well as the figures/text for the practical part. Furthermore, include in this compress file a README with your names and cse usernames.
-Please write readable code, with documentation where needed, as the code will also be checked manually.
 
